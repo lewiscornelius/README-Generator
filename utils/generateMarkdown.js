@@ -1,20 +1,17 @@
-
 function renderLicenseBadge(license) {
     if (license !== 'None') {
-        return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`;
+      return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`;
     }
     return '';
-}
-
-
-function renderLicenseLink(license) {
+  }
+  
+  function renderLicenseLink(license) {
     if (license !== 'None') {
       return `\n* [License](#license)\n`;
     }
     return '';
   }
-
-
+  
   function renderLicenseSection(license) {
     if (license !== 'None') {
       return `## License
@@ -23,9 +20,8 @@ function renderLicenseLink(license) {
     }
     return '';
   }
-
-
-function generateMarkdown(data) {
+  
+  function generateMarkdown(data) {
     return `# ${data.title}
   ${renderLicenseBadge(data.license)}
   
@@ -52,33 +48,31 @@ function generateMarkdown(data) {
   \`\`\`
   ${data.installation}
   \`\`\`
-
+  
   ## Usage
-
+  
   ${data.usage}
-
+  
   ${renderLicenseSection(data.license)}
-
+    
   ## Contributing
-
+  
   ${data.contributing}
-
+  
   ## Tests
-
-  To run test, follow these commands:
+  
+  To run tests, run the following command:
   
   \`\`\`
   ${data.test}
   \`\`\`
-
+  
   ## Questions
-  If you have any questions about the repo, open an issue or contact me directly at ${
-    data.email
-  }. You can find more of my work at [${data.github}](https://github.com/${
-    data.github
-  }/).
-
+  
+  If you have any questions about the repo, open an issue or contact me directly at ${data.email}. You can find more of my work at [${data.github}](https://github.com/${data.github}/).
   `;
-}
-
-module.exports = generateMarkdown;
+  
+  }
+  
+  module.exports = generateMarkdown;
+  
