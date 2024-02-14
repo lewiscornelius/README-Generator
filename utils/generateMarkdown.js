@@ -9,18 +9,20 @@ function renderLicenseBadge(license) {
 
 function renderLicenseLink(license) {
     if (license !== 'None') {
-        return `\n* [License](#license)\n`;
+      return `\n* [License](#license)\n`;
     }
     return '';
-}
+  }
 
 
-function renderLicenseSection(license) {
-    if  (license !== 'None') {
-        return `## License This  project is licensed under the ${license} license.`;
+  function renderLicenseSection(license) {
+    if (license !== 'None') {
+      return `## License
+  
+  This project is licensed under the ${license} license.`;
     }
     return '';
-}
+  }
 
 
 function generateMarkdown(data) {
