@@ -24,28 +24,29 @@ function renderLicenseSection(license) {
 
 
 function generateMarkdown(data) {
-  return `# ${data.title}
+    return `# ${data.title}
   ${renderLicenseBadge(data.license)}
-
+  
   ## Description
-
+  
   ${data.description}
-
-  ## Table of Contents
-
+  
+  ## Table of Contents 
+  
   * [Installation](#installation)
   
   * [Usage](#usage)
-  
+  ${renderLicenseLink(data.license)}
   * [Contributing](#contributing)
   
   * [Tests](#tests)
   
-  ${renderLicenseLink(data.license)}
+  * [Questions](#questions)
   
   ## Installation
-
-  To install necessary dependencies use the following command:
+  
+  To install necessary dependencies, run the following command:
+  
   \`\`\`
   ${data.installation}
   \`\`\`
@@ -63,15 +64,19 @@ function generateMarkdown(data) {
   ## Tests
 
   To run test, follow these commands:
+  
   \`\`\`
   ${data.test}
   \`\`\`
 
   ## Questions
-  If you have any questions about this project, please reach out to me at ${data.email
-}. Or you can find more at [${data.github}](https://github.com/${data.github}/).
+  If you have any questions about the repo, open an issue or contact me directly at ${
+    data.email
+  }. You can find more of my work at [${data.github}](https://github.com/${
+    data.github
+  }/).
 
-`;
+  `;
 }
 
 module.exports = generateMarkdown;
